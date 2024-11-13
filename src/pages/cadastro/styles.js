@@ -1,19 +1,14 @@
-import styled from 'styled-components';
+import styled, {css} from "styled-components";
 
 export const Container = styled.main`
     width: 100%;
-    max-width: 80%;
-    margin: 0 auto;
+    max-width: 0 auto;
     margin-top: 120px;
-
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-`
-
-export const Wrapper = styled.div`
-    max-width: 300px;
 `
 
 export const Column = styled.div`
@@ -23,21 +18,20 @@ export const Column = styled.div`
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    margin-right
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
 `
-
-
 
 export const Title = styled.h2`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
-    max-width: 90%;
     margin-bottom: 20px;
     line-height: 44px;
+    margin-left: 65px;
+    height: 308px;
 
     color: #FFFFFF;
 `
@@ -60,25 +54,45 @@ export const SubtitleLogin = styled.p`
     margin-bottom: 35px;
 `
 
+export const BeneathLogin = styled.p`
+    margin-top: 24px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
 
-export const EsqueciText  = styled.p`
+    color: #FFFFFF;
+`
+
+export const Wrapper = styled.div`
+    max-width: 300px;
+`
+
+export const LoginText =  styled.p`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+    color: #FFFFFF;
+    margin-right: 5px;
+    
 
-    color: #E5E044;
-` 
+    button {
+        color: #23DD7A;
+        background: transparent;
+        border: transparent;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 19px;
+    }
+`
 
-export const CriarText =  styled.button`
+export const ErrorText = styled.span`
     font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 19px;
-    border: transparent;
-    background: transparent;
-
-    color: #23DD7A;
+    color:#FF0000;
+    font-size: 12px;
 `

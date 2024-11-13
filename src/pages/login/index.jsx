@@ -14,6 +14,10 @@ const Login = () => {
 
     const navigate = useNavigate()
 
+    const handleCreateClick = () => {
+        navigate('/cadastro')
+    }
+
     const { control, handleSubmit, formState: { errors  } } = useForm({
         reValidateMode: 'onChange',
         mode: 'onChange',
@@ -27,10 +31,9 @@ const Login = () => {
                 navigate('/feed') 
                 return
             }
-
             alert('Usuário ou senha inválido')
         }catch(e){
-            //TODO: HOUVE UM ERRO
+            alert(`Houve um erro: ${e}`)
         }
     };
 
@@ -56,7 +59,7 @@ const Login = () => {
                 </form>
                 <Row>
                     <EsqueciText>Esqueci minha senha</EsqueciText>
-                    <CriarText>Criar Conta</CriarText>
+                    <CriarText onClick={handleCreateClick}>Criar Conta</CriarText>
                 </Row>
                 </Wrapper>
             </Column>

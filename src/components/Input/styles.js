@@ -21,5 +21,4 @@ export const InputText = styled.input`
     flex:1;
     border: 0;
     height: 30px;
-    
 `
